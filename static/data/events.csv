@@ -101,76 +101,76 @@ Men's Individual;modern-pentathlon;Modern Pentathlon;Athletics & Endurance Sport
 Women's Individual;triathlon;Triathlon;Athletics & Endurance Sports;TRI
 Men's Individual;triathlon;Triathlon;Athletics & Endurance Sports;TRI
 Mixed Relay;triathlon;Triathlon;Athletics & Endurance Sports;TRI
-Women's Boulder & Lead;sport-climbing;Sport Climbing;Climbing Sports;CLB
-Women's Speed;sport-climbing;Sport Climbing;Climbing Sports;CLB
-Men's Boulder & Lead;sport-climbing;Sport Climbing;Climbing Sports;CLB
-Men's Speed;sport-climbing;Sport Climbing;Climbing Sports;CLB
-Men's 51kg;boxing;Boxing;Combat Sports;BOX
-Men's 57kg;boxing;Boxing;Combat Sports;BOX
-Men's 63.5kg;boxing;Boxing;Combat Sports;BOX
-Men's 71kg;boxing;Boxing;Combat Sports;BOX
-Men's 80kg;boxing;Boxing;Combat Sports;BOX
-Men's 92kg;boxing;Boxing;Combat Sports;BOX
-Men's +92kg;boxing;Boxing;Combat Sports;BOX
-Women's 50kg;boxing;Boxing;Combat Sports;BOX
-Women's 54kg;boxing;Boxing;Combat Sports;BOX
-Women's 57kg;boxing;Boxing;Combat Sports;BOX
-Women's 60kg;boxing;Boxing;Combat Sports;BOX
-Women's 66kg;boxing;Boxing;Combat Sports;BOX
-Women's 75kg;boxing;Boxing;Combat Sports;BOX
-Women's Épée Individual;fencing;Fencing;Combat Sports;FEN
-Women's Foil Individual;fencing;Fencing;Combat Sports;FEN
-Women's Sabre Individual;fencing;Fencing;Combat Sports;FEN
-Men's Épée Individual;fencing;Fencing;Combat Sports;FEN
-Men's Foil Individual;fencing;Fencing;Combat Sports;FEN
-Men's Sabre Individual;fencing;Fencing;Combat Sports;FEN
-Women's Épée Team;fencing;Fencing;Combat Sports;FEN
-Women's Foil Team;fencing;Fencing;Combat Sports;FEN
-Women's Sabre Team;fencing;Fencing;Combat Sports;FEN
-Men's Épée Team;fencing;Fencing;Combat Sports;FEN
-Men's Foil Team;fencing;Fencing;Combat Sports;FEN
-Men's Sabre Team;fencing;Fencing;Combat Sports;FEN
-Women -48 kg;judo;Judo;Combat Sports;JUD
-Women -52 kg;judo;Judo;Combat Sports;JUD
-Women -57 kg;judo;Judo;Combat Sports;JUD
-Women -63 kg;judo;Judo;Combat Sports;JUD
-Women -70 kg;judo;Judo;Combat Sports;JUD
-Women -78 kg;judo;Judo;Combat Sports;JUD
-Women +78 kg;judo;Judo;Combat Sports;JUD
-Men -60 kg;judo;Judo;Combat Sports;JUD
-Men -66 kg;judo;Judo;Combat Sports;JUD
-Men -73 kg;judo;Judo;Combat Sports;JUD
-Men -81 kg;judo;Judo;Combat Sports;JUD
-Men -90 kg;judo;Judo;Combat Sports;JUD
-Men -100 kg;judo;Judo;Combat Sports;JUD
-Men +100 kg;judo;Judo;Combat Sports;JUD
-Mixed Team;judo;Judo;Combat Sports;JUD
-Men -58kg;taekwondo;Taekwondo;Combat Sports;TKW
-Men -68kg;taekwondo;Taekwondo;Combat Sports;TKW
-Men -80kg;taekwondo;Taekwondo;Combat Sports;TKW
-Men +80kg;taekwondo;Taekwondo;Combat Sports;TKW
-Women -49kg;taekwondo;Taekwondo;Combat Sports;TKW
-Women -57kg;taekwondo;Taekwondo;Combat Sports;TKW
-Women -67kg;taekwondo;Taekwondo;Combat Sports;TKW
-Women +67kg;taekwondo;Taekwondo;Combat Sports;TKW
-Men's Greco-Roman 60kg;wrestling;Wrestling;Combat Sports;WRE
-Men's Greco-Roman 67kg;wrestling;Wrestling;Combat Sports;WRE
-Men's Greco-Roman 77kg;wrestling;Wrestling;Combat Sports;WRE
-Men's Greco-Roman 87kg;wrestling;Wrestling;Combat Sports;WRE
-Men's Greco-Roman 97kg;wrestling;Wrestling;Combat Sports;WRE
-Men's Greco-Roman 130kg;wrestling;Wrestling;Combat Sports;WRE
-Women's Freestyle 50kg;wrestling;Wrestling;Combat Sports;WRE
-Women's Freestyle 53kg;wrestling;Wrestling;Combat Sports;WRE
-Women's Freestyle 57kg;wrestling;Wrestling;Combat Sports;WRE
-Women's Freestyle 62kg;wrestling;Wrestling;Combat Sports;WRE
-Women's Freestyle 68kg;wrestling;Wrestling;Combat Sports;WRE
-Women's Freestyle 76kg;wrestling;Wrestling;Combat Sports;WRE
-Men's Freestyle 57kg;wrestling;Wrestling;Combat Sports;WRE
-Men's Freestyle 65kg;wrestling;Wrestling;Combat Sports;WRE
-Men's Freestyle 74kg;wrestling;Wrestling;Combat Sports;WRE
-Men's Freestyle 86kg;wrestling;Wrestling;Combat Sports;WRE
-Men's Freestyle 97kg;wrestling;Wrestling;Combat Sports;WRE
-Men's Freestyle 125kg;wrestling;Wrestling;Combat Sports;WRE
+Women's Boulder & Lead;sport-climbing;Sport Climbing;Extreme & Urban Sports;CLB
+Women's Speed;sport-climbing;Sport Climbing;Extreme & Urban Sports;CLB
+Men's Boulder & Lead;sport-climbing;Sport Climbing;Extreme & Urban Sports;CLB
+Men's Speed;sport-climbing;Sport Climbing;Extreme & Urban Sports;CLB
+Men's 51kg;boxing;Boxing;Combat & Strength Sports;BOX
+Men's 57kg;boxing;Boxing;Combat & Strength Sports;BOX
+Men's 63.5kg;boxing;Boxing;Combat & Strength Sports;BOX
+Men's 71kg;boxing;Boxing;Combat & Strength Sports;BOX
+Men's 80kg;boxing;Boxing;Combat & Strength Sports;BOX
+Men's 92kg;boxing;Boxing;Combat & Strength Sports;BOX
+Men's +92kg;boxing;Boxing;Combat & Strength Sports;BOX
+Women's 50kg;boxing;Boxing;Combat & Strength Sports;BOX
+Women's 54kg;boxing;Boxing;Combat & Strength Sports;BOX
+Women's 57kg;boxing;Boxing;Combat & Strength Sports;BOX
+Women's 60kg;boxing;Boxing;Combat & Strength Sports;BOX
+Women's 66kg;boxing;Boxing;Combat & Strength Sports;BOX
+Women's 75kg;boxing;Boxing;Combat & Strength Sports;BOX
+Women's Épée Individual;fencing;Fencing;Combat & Strength Sports;FEN
+Women's Foil Individual;fencing;Fencing;Combat & Strength Sports;FEN
+Women's Sabre Individual;fencing;Fencing;Combat & Strength Sports;FEN
+Men's Épée Individual;fencing;Fencing;Combat & Strength Sports;FEN
+Men's Foil Individual;fencing;Fencing;Combat & Strength Sports;FEN
+Men's Sabre Individual;fencing;Fencing;Combat & Strength Sports;FEN
+Women's Épée Team;fencing;Fencing;Combat & Strength Sports;FEN
+Women's Foil Team;fencing;Fencing;Combat & Strength Sports;FEN
+Women's Sabre Team;fencing;Fencing;Combat & Strength Sports;FEN
+Men's Épée Team;fencing;Fencing;Combat & Strength Sports;FEN
+Men's Foil Team;fencing;Fencing;Combat & Strength Sports;FEN
+Men's Sabre Team;fencing;Fencing;Combat & Strength Sports;FEN
+Women -48 kg;judo;Judo;Combat & Strength Sports;JUD
+Women -52 kg;judo;Judo;Combat & Strength Sports;JUD
+Women -57 kg;judo;Judo;Combat & Strength Sports;JUD
+Women -63 kg;judo;Judo;Combat & Strength Sports;JUD
+Women -70 kg;judo;Judo;Combat & Strength Sports;JUD
+Women -78 kg;judo;Judo;Combat & Strength Sports;JUD
+Women +78 kg;judo;Judo;Combat & Strength Sports;JUD
+Men -60 kg;judo;Judo;Combat & Strength Sports;JUD
+Men -66 kg;judo;Judo;Combat & Strength Sports;JUD
+Men -73 kg;judo;Judo;Combat & Strength Sports;JUD
+Men -81 kg;judo;Judo;Combat & Strength Sports;JUD
+Men -90 kg;judo;Judo;Combat & Strength Sports;JUD
+Men -100 kg;judo;Judo;Combat & Strength Sports;JUD
+Men +100 kg;judo;Judo;Combat & Strength Sports;JUD
+Mixed Team;judo;Judo;Combat & Strength Sports;JUD
+Men -58kg;taekwondo;Taekwondo;Combat & Strength Sports;TKW
+Men -68kg;taekwondo;Taekwondo;Combat & Strength Sports;TKW
+Men -80kg;taekwondo;Taekwondo;Combat & Strength Sports;TKW
+Men +80kg;taekwondo;Taekwondo;Combat & Strength Sports;TKW
+Women -49kg;taekwondo;Taekwondo;Combat & Strength Sports;TKW
+Women -57kg;taekwondo;Taekwondo;Combat & Strength Sports;TKW
+Women -67kg;taekwondo;Taekwondo;Combat & Strength Sports;TKW
+Women +67kg;taekwondo;Taekwondo;Combat & Strength Sports;TKW
+Men's Greco-Roman 60kg;wrestling;Wrestling;Combat & Strength Sports;WRE
+Men's Greco-Roman 67kg;wrestling;Wrestling;Combat & Strength Sports;WRE
+Men's Greco-Roman 77kg;wrestling;Wrestling;Combat & Strength Sports;WRE
+Men's Greco-Roman 87kg;wrestling;Wrestling;Combat & Strength Sports;WRE
+Men's Greco-Roman 97kg;wrestling;Wrestling;Combat & Strength Sports;WRE
+Men's Greco-Roman 130kg;wrestling;Wrestling;Combat & Strength Sports;WRE
+Women's Freestyle 50kg;wrestling;Wrestling;Combat & Strength Sports;WRE
+Women's Freestyle 53kg;wrestling;Wrestling;Combat & Strength Sports;WRE
+Women's Freestyle 57kg;wrestling;Wrestling;Combat & Strength Sports;WRE
+Women's Freestyle 62kg;wrestling;Wrestling;Combat & Strength Sports;WRE
+Women's Freestyle 68kg;wrestling;Wrestling;Combat & Strength Sports;WRE
+Women's Freestyle 76kg;wrestling;Wrestling;Combat & Strength Sports;WRE
+Men's Freestyle 57kg;wrestling;Wrestling;Combat & Strength Sports;WRE
+Men's Freestyle 65kg;wrestling;Wrestling;Combat & Strength Sports;WRE
+Men's Freestyle 74kg;wrestling;Wrestling;Combat & Strength Sports;WRE
+Men's Freestyle 86kg;wrestling;Wrestling;Combat & Strength Sports;WRE
+Men's Freestyle 97kg;wrestling;Wrestling;Combat & Strength Sports;WRE
+Men's Freestyle 125kg;wrestling;Wrestling;Combat & Strength Sports;WRE
 Women's Park;cycling-bmx-freestyle;Cycling BMX Freestyle;Cycling Sports;BMF
 Men's Park;cycling-bmx-freestyle;Cycling BMX Freestyle;Cycling Sports;BMF
 Women;cycling-bmx-racing;Cycling BMX Racing;Cycling Sports;BMX
@@ -296,22 +296,22 @@ Women's Singles;tennis;Tennis;Racket Sports;TEN
 Men's Doubles;tennis;Tennis;Racket Sports;TEN
 Women's Doubles;tennis;Tennis;Racket Sports;TEN
 Mixed Doubles;tennis;Tennis;Racket Sports;TEN
-Women's Street;skateboarding;Skateboarding;Sliding Sports;SKB
-Men's Street;skateboarding;Skateboarding;Sliding Sports;SKB
-Women's Park;skateboarding;Skateboarding;Sliding Sports;SKB
-Men's Park;skateboarding;Skateboarding;Sliding Sports;SKB
-Men;surfing;Surfing;Sliding Sports;SRF
-Women;surfing;Surfing;Sliding Sports;SRF
-Women's 49kg;weightlifting;Weightlifting;Strength Sports;WLF
-Women's 59kg;weightlifting;Weightlifting;Strength Sports;WLF
-Women's 71kg;weightlifting;Weightlifting;Strength Sports;WLF
-Women's 81kg;weightlifting;Weightlifting;Strength Sports;WLF
-Women's +81kg;weightlifting;Weightlifting;Strength Sports;WLF
-Men's 61kg;weightlifting;Weightlifting;Strength Sports;WLF
-Men's 73kg;weightlifting;Weightlifting;Strength Sports;WLF
-Men's 89kg;weightlifting;Weightlifting;Strength Sports;WLF
-Men's 102kg;weightlifting;Weightlifting;Strength Sports;WLF
-Men's +102kg;weightlifting;Weightlifting;Strength Sports;WLF
+Women's Street;skateboarding;Skateboarding;Extreme & Urban Sports;SKB
+Men's Street;skateboarding;Skateboarding;Extreme & Urban Sports;SKB
+Women's Park;skateboarding;Skateboarding;Extreme & Urban Sports;SKB
+Men's Park;skateboarding;Skateboarding;Extreme & Urban Sports;SKB
+Men;surfing;Surfing;Extreme & Urban Sports;SRF
+Women;surfing;Surfing;Extreme & Urban Sports;SRF
+Women's 49kg;weightlifting;Weightlifting;Combat & Strength Sports;WLF
+Women's 59kg;weightlifting;Weightlifting;Combat & Strength Sports;WLF
+Women's 71kg;weightlifting;Weightlifting;Combat & Strength Sports;WLF
+Women's 81kg;weightlifting;Weightlifting;Combat & Strength Sports;WLF
+Women's +81kg;weightlifting;Weightlifting;Combat & Strength Sports;WLF
+Men's 61kg;weightlifting;Weightlifting;Combat & Strength Sports;WLF
+Men's 73kg;weightlifting;Weightlifting;Combat & Strength Sports;WLF
+Men's 89kg;weightlifting;Weightlifting;Combat & Strength Sports;WLF
+Men's 102kg;weightlifting;Weightlifting;Combat & Strength Sports;WLF
+Men's +102kg;weightlifting;Weightlifting;Combat & Strength Sports;WLF
 Men;basketball;Basketball;Team Sports;BKB
 Women;basketball;Basketball;Team Sports;BKB
 Men;3x3-basketball;3x3 Basketball;Team Sports;BK3

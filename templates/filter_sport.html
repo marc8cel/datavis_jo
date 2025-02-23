@@ -17,50 +17,59 @@
                 width: 80%;
                 margin: auto;
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);  /* 3 cartes par ligne */
-                grid-gap: 20px;
-                overflow: auto;
+                grid-template-columns: repeat(4, 1fr);  /* 3 cartes par ligne */
+                grid-gap: 15px;
                 padding: 20px;
                 max-height: 400px;  /* Limite la hauteur pour afficher 2 lignes */
                 border: 1px solid #ddd;
                 border-radius: 10px;
+                overflow: auto;
             }
 
             /* Style général des cartes */
             .category-card {
                 background-color: #ffffff;
-                padding: 15px;
+                padding: 10px;
                 border-radius: 15px;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                 text-align: center;
-                min-height: 150px;
+                min-height: 130px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 position: relative;
                 width: auto; /* Ajustement dynamique */
                 transition: none;
+                overflow: visible;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
             }
+            
 
             /* Style des titres */
             .category-card h2 {
-                font-size: 18px;
+                font-size: 16px;
                 color: #333;
-                margin-bottom: 10px;
-                white-space: nowrap;
-                overflow: hidden;
+                margin-bottom: 5px;
+                white-space: normal;
+                overflow: visible;
                 text-overflow: ellipsis;
+                word-wrap: break-word; /* Coupe proprement les mots longs */
+                text-align: center;
             }
 
             /* Listes des sports */
             .sport-list {
                 margin: 0;
+                overflow: visible;
                 padding: 0;
                 list-style: none;
             }
 
             .sport-list li {
                 display: flex;
+                overflow: visible;
                 align-items: center;
                 margin-top: 5px;
                 font-size: 16px;
@@ -76,8 +85,8 @@
             }
 
             .sport-list li img {
-                width: 20px;
-                height: 20px;
+                width: 30px;
+                height: 30px;
                 margin-right: 10px;
             }
 
@@ -95,6 +104,7 @@
             /* Style spécifique pour les sports cachés */
             .sport-list.hidden {
                 position: absolute;
+                overflow: visible;
                 top: 100%;
                 left: 0;
                 width: 100%;
@@ -105,6 +115,7 @@
 
             /* Style appliqué aux cartes étendues */
             .category-card.expanded {
+                overflow: visible;
                 width: var(--fixed-width, auto) !important;
                 min-width: var(--fixed-width, auto) !important;
                 max-width: var(--fixed-width, auto) !important;
@@ -131,17 +142,12 @@
             .hidden {
                 display: none !important;
             }
-            .category-card {
-                position: relative;
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                overflow: hidden; /* Empêche les débordements */
-            }
+
 
             .category-card::before {
                 content: "";
                 position: absolute;
+                overflow: visible;
                 top: 0;
                 left: 0;
                 width: 100%;
@@ -154,52 +160,144 @@
 
             .category-card > * {
                 position: relative;
-                z-index: 2; /* S'assurer que le texte et les icônes restent visibles */
+                z-index: 10; /* S'assurer que le texte et les icônes restent visibles */
             }
 
+            header {
+                display: flex;
+                align-items: center;
+                padding: 10px 20px;
+                background-color: white;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
 
+            .logo {
+                height: 50px;
+                margin-right: 20px;
+            }
+
+            header h1 {
+                font-size: 24px;
+                color: #333;
+            }
+            .search-container {
+                width: 100%;
+                display: flex;
+                justify-content: flex-start; /* Aligné à gauche */
+                margin-bottom: 10px;
+            }
+
+            #search-bar {
+                width: 100%;
+                max-width: 400px;
+                padding: 10px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+            #selected-event {
+                font-weight: bold;
+                color: #333;
+            }
+
+            .event-item {
+                padding: 5px 10px;
+                white-space: nowrap;
+            }
+
+            .sport-item {
+                position: relative;
+                overflow: visible;
+                z-index: 1;
+            }
+            
+
+            .event-menu {
+                display: none;
+                position: absolute;
+                top: 50%; /* Centre verticalement par rapport au sport */
+                left: 100%; /* Place le menu à droite */
+                background: white;
+                border: 1px solid #ccc;
+                padding: 10px;
+                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+                min-width: 150px;
+                flex-wrap: wrap;
+                width: 500px;
+            }
+
+            .event-item {
+                width: 50%; /* Chaque événement prend la moitié de la largeur */
+                box-sizing: border-box;
+                padding: 5px;
+            }
     </style>
 </head>
 <body>
-    <h1>Filtrer par Sport</h1>
+    <header>
+        <a href="{{ url_for('home') }}">
+            <img src="{{ url_for('static', filename='Images/olympic_rings.png') }}" alt="Olympic Rings" class="logo">
+        </a>
+        <h1>Explorer les Sports Olympiques</h1>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Rechercher une catégorie..." oninput="filterCategories()">
+        <span id="selected-event"></span>
+    </div>
+
     <div class="category-container">
         {% for category, sports in first_three_sports.items() %}
         <div class="category-card" id="card-{{ category }}" 
-        style="background-image: url('{{ url_for('static', filename='Images/icone_category/' + category|replace(' ', '_')|lower + '.png') }}');">
-               <div class="first-sports">
+            style="background-image: url('{{ url_for('static', filename='Images/icone_category/' + category|replace(' ', '_')|lower + '.png') }}');">
+            
+            <div class="first-sports">
                 <h2>{{ category }}</h2>
             </div>
-
+    
             <ul class="sport-list">
-                <!-- Afficher les trois premiers sports -->
-                {% for sport in sports %}
-                    <li>
+                {% for sport, data in sports.items() %}
+                    <li class="sport-item" data-sport="{{ sport }}">
                         <img src="{{ url_for('static', filename='Images/icone_sport/' + sport.replace(' ', '_') + '.png') }}" alt="{{ sport }} icon">
                         {{ sport }}
+                        <div class="event-menu">
+                            {% for event in data.events %}
+                                <div class="event-item">{{ event }}</div>
+                            {% endfor %}
+                        </div>
                     </li>
                 {% endfor %}
             </ul>
             
-            
-
-            <!-- Afficher la liste complète des sports restants avec un bouton "Voir plus" -->
+    
             <ul class="sport-list hidden" id="all-sports-{{ category }}">
-                {% for sport in remaining_sports[category] %}
-                    <li>
+                {% for sport, data in remaining_sports[category].items() %}
+                    <li class="sport-item" data-sport="{{ sport }}">
                         <img src="{{ url_for('static', filename='Images/icone_sport/' + sport.replace(' ', '_') + '.png') }}" alt="{{ sport }} icon">
                         {{ sport }}
+                        <div class="event-menu">
+                            {% for event in data.events %}
+                                <div class="event-item">{{ event }}</div>
+                            {% endfor %}
+                        </div>
                     </li>
                 {% endfor %}
             </ul>
-
+    
             {% if remaining_sports[category]|length > 0 %}
                 <span class="show-more" id="toggle-{{ category }}" onclick="toggleSports('{{ category }}')">↓</span>
             {% endif %}
         </div>
         {% endfor %}
     </div>
+    
 
+    
     <script>
+        // ----------------
+        // Fonction pour afficher ou cacher les sports supplémentaires d'une catégorie
         function toggleSports(category) {
             let card = document.getElementById("card-" + category);
             let extraSports = document.getElementById("all-sports-" + category);
@@ -248,47 +346,43 @@
                 showMoreButton.textContent = "↓";
             }
         }
+            
+        // ----------------
+        // Fonction pour filtrer les catégories et sports en fonction de la barre de recherche
+       function filterCategories() {
+    let input = document.getElementById("search-bar").value.toLowerCase();
+    let cards = document.querySelectorAll(".category-card");
 
-        document.addEventListener("DOMContentLoaded", function () {
-            let categoryContainer = document.querySelector(".category-container");
+    cards.forEach(card => {
+        let categoryNameElement = card.querySelector("h2");
+        let sports = card.querySelectorAll(".sport-item");
+        let categoryName = categoryNameElement.textContent;
+        let foundInCategory = categoryName.toLowerCase().includes(input);
+        let foundInSports = false;
 
-            if (categoryContainer) {
-                categoryContainer.addEventListener("scroll", function () {
-                    let expandedCard = document.querySelector(".category-card.expanded");
+        // Fonction pour mettre en évidence le texte
+        function highlightMatch(text, query, color = false) {
+            if (!query) return text;
+            let regex = new RegExp(`(${query})`, "gi");
+            return text.replace(regex, color ? `<span style="color: #007bff;">$1</span>` : `<strong>$1</strong>`);
+        }
 
-                    if (expandedCard) {
-                        let category = expandedCard.id.replace("card-", ""); 
-                        let extraSports = document.getElementById("all-sports-" + category);
-                        let showMoreButton = document.getElementById("toggle-" + category);
+        // Appliquer la mise en couleur sur le nom de la catégorie
+        categoryNameElement.innerHTML = foundInCategory ? highlightMatch(categoryName, input, true) : categoryName;
 
-                        // Réinitialiser la carte
-                        expandedCard.classList.remove("expanded");
-                        expandedCard.style.position = "";
-                        expandedCard.style.left = "";
-                        expandedCard.style.top = "";
-                        expandedCard.style.width = "";
-                        expandedCard.style.setProperty("--fixed-width", "auto");
+        // Afficher ou masquer la carte
+        card.style.display = (foundInCategory || foundInSports) ? "block" : "none";
 
-                        // Cacher la liste des sports supplémentaires
-                        if (extraSports) {
-                            extraSports.classList.add("hidden");
-                        }
+        // Si la catégorie correspond, afficher tous les sports
+        if (foundInCategory) {
+            sports.forEach(sport => sport.style.display = "flex");
+        }
+    });
+}
 
-                        // Remettre le bouton à son état initial
-                        if (showMoreButton) {
-                            showMoreButton.textContent = "↓";
-                        }
 
-                        // Supprimer le placeholder s'il existe
-                        let placeholder = expandedCard.parentElement.querySelector(".placeholder");
-                        if (placeholder) {
-                            placeholder.remove();
-                        }
-                    }
-                });
-            }
-        });
-
+        // ----
+        // Ferme automatiquement une carte étendue si on clique en dehors
         document.addEventListener("click", function (event) {
             let expandedCard = document.querySelector(".category-card.expanded");
 
@@ -297,6 +391,100 @@
                 toggleSports(category);
             }
         });
+
+        // --------------------------
+        // Affichage et selection des events liés au sport
+        let selectedSport = null;
+        let selectedEvent = null;
+
+        document.querySelectorAll('.sport-item').forEach(item => {
+            const menu = item.querySelector('.event-menu');
+
+            item.addEventListener('click', (event) => {
+                event.stopPropagation(); // Empêche la fermeture immédiate lors du clic
+
+                if (menu) {
+                    // Fermer tous les autres menus avant d'ouvrir celui-ci
+                    document.querySelectorAll('.event-menu').forEach(m => {
+                        if (m !== menu) {
+                            m.style.display = 'none';
+                        }
+                    });
+
+                    if (menu.style.display === 'block') {
+                        menu.style.display = 'none'; // Ferme si déjà ouvert
+                    } else {
+                        selectedSport = item.getAttribute('data-sport'); // Stocke le sport sélectionné
+
+                        menu.style.display = 'block';
+                        setTimeout(() => {
+                            menu.style.display = 'grid';
+                            menu.style.gridTemplateColumns = 'repeat(2, 1fr)'; // Deux colonnes
+                            menu.style.gap = '5px';
+                        }, 0);
+                        
+                        document.body.appendChild(menu);
+                        menu.style.position = 'absolute';
+                        menu.style.zIndex = '1000';
+
+                        const rect = item.getBoundingClientRect();
+                        menu.style.top = `${rect.top + window.scrollY}px`;
+                        menu.style.left = `${rect.right + window.scrollX}px`;
+                    }
+                }
+            });
+
+            // Empêcher la disparition immédiate quand on clique sur le menu
+            menu.addEventListener('click', (event) => {
+                event.stopPropagation();
+            });
+        });
+
+        // Cacher tous les menus si on clique en dehors
+        document.addEventListener('click', () => {
+            document.querySelectorAll('.event-menu').forEach(menu => {
+                menu.style.display = 'none';
+            });
+        });
+
+        // --------------------
+        // Mise à jour de l'événement sélectionné en haut à gauche
+        document.querySelectorAll('.event-item').forEach(eventItem => {
+            eventItem.addEventListener('click', (event) => {
+                event.stopPropagation(); // Empêche la fermeture immédiate
+                selectedEvent = eventItem.textContent.trim(); // Stocke l'événement sélectionné
+                document.getElementById('selected-event').textContent = `Sport: ${selectedSport}, Événement: ${selectedEvent}`;
+
+                // Ferme le menu après sélection
+                const menu = eventItem.closest('.event-menu');
+                if (menu) {
+                    menu.style.display = 'none';
+                }
+            });
+        });
+
+        //--------------------
+        //reinitialise les cartes quand on scroll : les sports en +
+        document.querySelector(".category-container").addEventListener("scroll", function () {
+            let expandedCard = document.querySelector(".category-card.expanded");
+            if (expandedCard) {
+                let category = expandedCard.id.replace("card-", ""); 
+                toggleSports(category);
+            }
+        });
+        
+        //reinitialise les cartes quand on scroll : les events en +
+        document.querySelector(".category-container").addEventListener("scroll", function () {
+            let expandedCard = document.querySelector(".category-card.expanded");
+
+            // Masque les événements affichés
+            document.querySelectorAll(".event-menu").forEach(eventMenu => {
+                eventMenu.style.display = "none";
+            });
+        });
+        
+
+
 
 
     </script>
